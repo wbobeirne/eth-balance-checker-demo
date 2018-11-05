@@ -1,0 +1,246 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v4.0 | 20180602
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block; }
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html,
+body {
+  line-height: 1.6; }
+
+body {
+  color: #333;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.Template-top {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 30px;
+  background: linear-gradient(to top, #141e30, #243b55);
+  color: #FFF;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
+  .Template-top > * {
+    flex: 1;
+    width: 50%; }
+  @media (max-width: 800px) {
+    .Template-top {
+      flex-direction: column; }
+      .Template-top > * {
+        width: 100%;
+        border-right: none; } }
+
+.Template-bottom {
+  padding: 30px; }
+
+.Info {
+  padding-right: 40px;
+  max-width: 840px;
+  margin: 0 auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.08); }
+  @media (max-width: 800px) {
+    .Info {
+      border-right: none;
+      padding-right: 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08); } }
+  .Info-title {
+    font-size: 32px;
+    margin-bottom: 10px; }
+  .Info-text {
+    font-size: 16px;
+    opacity: 0.8;
+    margin-bottom: 10px; }
+  .Info-links-link {
+    position: relative;
+    display: block;
+    padding: 12px 20px 12px 50px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #FFF;
+    border-radius: 4px;
+    text-decoration: none; }
+    .Info-links-link:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .Info-links-link.is-medium {
+      background: linear-gradient(-180deg, #60BD72, #50A360 90%);
+      color: #FFF; }
+      .Info-links-link.is-medium:after {
+        background-image: url("https://i.imgur.com/Fu2AHNY.png"); }
+    .Info-links-link.is-github {
+      background: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+      color: #24292e; }
+      .Info-links-link.is-github:after {
+        background-image: url("https://i.imgur.com/w0sPagx.png"); }
+
+.Form {
+  padding-left: 40px; }
+  @media (max-width: 800px) {
+    .Form {
+      padding-left: 0;
+      padding-top: 20px; } }
+  .Form-field {
+    margin-bottom: 10px; }
+    .Form-field-label {
+      margin-bottom: 5px;
+      font-weight: bold; }
+  .Form-addresses-input {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    font-family: 'Lucida Console', Monaco, monospace;
+    outline: none; }
+    .Form-addresses-input:hover {
+      border-color: rgba(0, 0, 0, 0.4); }
+    .Form-addresses-input:focus, .Form-addresses-input:active {
+      border-color: #3498db; }
+  .Form-addresses-add {
+    display: block;
+    width: 100%;
+    border: 1px solid #FFF;
+    color: #FFF;
+    background: none;
+    font-size: 12px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    opacity: 0.8;
+    outline: none; }
+    .Form-addresses-add:hover, .Form-addresses-add:focus {
+      opacity: 1; }
+  .Form-library-radio {
+    display: inline-block;
+    margin-right: 10px; }
+    .Form-library-radio-label {
+      margin-left: 3px;
+      font-size: 13px; }
+  .Form-submit {
+    display: block;
+    width: 100%;
+    background: linear-gradient(-180deg, #4aa3df, #258cd1 90%);
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    color: #FFF;
+    padding: 12px 15px;
+    outline: none; }
+    .Form-submit:hover, .Form-submit:focus {
+      background: linear-gradient(-180deg, #5faee3, #3498db 90%); }
+
+.Balances {
+  display: flex; }
+  .Balances-column {
+    flex: 1;
+    margin: 0 10px; }
+    .Balances-column-title {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 10px; }
+    .Balances-column-summary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      color: #555;
+      font-size: 12px; }
+      .Balances-column-summary > * {
+        padding: 0 15px;
+        border-right: 1px solid #CCC; }
+        .Balances-column-summary > *:last-child {
+          border-right: none; }
+    .Balances-column-balances {
+      padding: 10px;
+      font-size: 10px;
+      line-height: 1.8;
+      background: #FAFAFA;
+      border: 1px solid #E7E7E7;
+      color: #777;
+      border-radius: 4px;
+      font-family: 'Lucida Console', Monaco, monospace; }
+    .Balances-column-loading {
+      padding-top: 30px;
+      text-align: center; }
+      .Balances-column-loading svg {
+        display: block;
+        margin: 0 auto 20px;
+        width: 50px;
+        height: 50px;
+        stroke: #3498db; }
+      .Balances-column-loading span {
+        font-size: 16px;
+        opacity: 0.5; }
+    .Balances-column-waiting {
+      padding-top: 60px;
+      font-size: 16px;
+      opacity: 0.5;
+      text-align: center; }
+    .Balances-column-error {
+      background: #e74c3c;
+      border-radius: 2px;
+      padding: 12px 20px;
+      color: #FFF;
+      text-align: center;
+      font-size: 16px; }
+

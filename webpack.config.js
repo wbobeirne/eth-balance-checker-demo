@@ -3,13 +3,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-config = {
+config = (env, argv) => ({
   entry: {
     script: ['./src/index.tsx']
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, './dist/'),
+    path: path.resolve(
+      __dirname,
+      argv.mode === 'production' ? './docs/' : './dist/',
+    ),
     publicPath: './',
   },
   resolve: {
@@ -50,6 +53,6 @@ config = {
   performance: {
     hints: false,
   },
-};
+});
 
 module.exports = config;
